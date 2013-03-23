@@ -1,0 +1,30 @@
+/**
+ * Header styles.
+ */
+body {
+  min-width:              900px;
+}
+
+.brand {
+  position:               absolute;
+  z-index:                20;
+}
+
+ul.nav {
+  margin-top:             25px !important;
+}
+
+#searchform {
+  margin-left:            1em !important;
+  margin-top:             25px !important;
+  padding-top:            5px;
+}
+
+#searchform .btn {
+  margin-top:             0px !important;
+}
+
+footer {
+  text-align:             center;
+  padding-bottom:         2em;
+}
