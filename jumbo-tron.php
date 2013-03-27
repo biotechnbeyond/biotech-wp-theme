@@ -12,7 +12,7 @@ get_header();
     <header class="jumbotron subhead homepage-lead" id="overview">
       <div class="container">
         <div class="row">
-          <div class="span6 homepage-about">
+          <div class="homepage-about">
             <?php if( have_posts() ): ?>
               <?php the_post(); ?>
 

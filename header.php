@@ -24,6 +24,11 @@ wp_enqueue_script( 'bootstrap', get_template_directory_uri() .
 wp_enqueue_script( 'header', get_template_directory_uri() .
   '/static/js/header.js', array( 'jquery' ) );
 
+if( is_page_template( 'jumbo-tron.php' ) ) {
+  wp_enqueue_script( 'jumbo-tron', get_template_directory_uri() .
+    '/static/js/jumbo-tron.js', array( 'jquery' ) );
+}
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
@@ -49,15 +54,15 @@ wp_enqueue_script( 'header', get_template_directory_uri() .
   </head>
 
   <body>
+  	<a class="brand" href="<?php echo home_url(); ?>">
+      <img src="<?php header_image(); ?>" height="<?php
+        echo get_custom_header()->height; ?>" width="<?php
+        echo get_custom_header()->width; ?>" alt="<?php
+        echo wp_title(); ?>" />
+    </a>
+  	
     <div class="navbar navbar-static-top">
       <div class="navbar-inner">
-        <a class="brand" href="<?php echo home_url(); ?>">
-          <img src="<?php header_image(); ?>" height="<?php
-            echo get_custom_header()->height; ?>" width="<?php
-            echo get_custom_header()->width; ?>" alt="<?php
-            echo wp_title(); ?>" />
-        </a>
-
         <div class="container">
           <?php echo get_search_form(); ?>
           <?php wp_nav_menu(

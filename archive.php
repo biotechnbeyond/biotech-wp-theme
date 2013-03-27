@@ -1,7 +1,9 @@
 <?php
 /**
- * Standard theme page display.
+ * Archive display.
  */
+global $more;
+$more = 0;
 
 get_header();
 
@@ -29,26 +31,22 @@ get_header();
               <?php the_time( 'F jS, Y' ) ?> by
               <?php the_author_posts_link(); ?>
             </i>
-
-            <?php edit_post_link( 'Edit', '<span class="edit">', '</span>' ); ?>
           </h6>
 
-          <?php the_content('<p>Read more...</p>'); ?>
+          <?php the_excerpt(); ?>
 
-          <p class="postmetadata">
-            <p><?php comments_popup_link('No Comments »', '1 Comment »',
-              '% Comments »'); ?></p>
-          </p>
-
-          <?php comments_template(); ?>
+          <span class="postmetadata">
+            <span><?php comments_popup_link('No Comments »', '1 Comment »',
+              '% Comments »'); ?></span>
+          </span>
+          
+          <?php bio_paging( 'paging-bottom' ); ?>
         </div>
 
       <?php endwhile; ?>
     <?php else: ?>
 
     <?php endif; ?>
-    
-    <?php bio_paging( 'paging-bottom' ); ?>
   </div>
 
   <div class="span1">&nbsp;</div>

@@ -1,10 +1,66 @@
 /**
  * Content page styles.
  */
+.comment-meta {
+ 	font-style:							italic;
+} 
+
+.comment-text {
+ 	margin-top:							.5em;
+}
+
+.comment-text blockquote p {
+	font-size:							16px;
+}
+
 .content {
   margin-top:             3em;
 }
 
+.edit {
+  font-size:              125%;
+  padding-left:           2em;
+}
+
+.nav-next {
+ 	float:									right;
+}
+
+.nav-previous {
+ 	float:									left;
+}
+
+#comment {
+	margin-top:							1em;
+	width:									17.5em;
+}
+
+#commentform label {
+ 	float:									left;
+ 	width:									5em;
+ 	margin-right:						.5em;
+ 	
+ 	font-weight:						bold;
+ 	text-align:							left;
+}
+
+#commentform input {
+ 	width:									12em;
+}
+
+#comments {
+  list-style-type:        none;
+}
+
+#paging-bottom {
+	margin-top:							3em;
+}
+
 #sidebar-right {
   margin-top:             1.5em;
+}
+
+#sub {
+ 	width:									8.5em;
+ 	margin-left:						10em;
 }

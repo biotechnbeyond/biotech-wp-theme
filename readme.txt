@@ -18,7 +18,6 @@ INSTRUCTIONS
   c. You can make a slideshow under Slideshows >> Add New.
   d. Set the height of the slideshow to 385 or it'll get clipped at the bottom.
   e. I've included some slides to get you started.
-  f. Add images under Media >> Library.
 5. Install the Per Post Widgets plug-in.
   a. http://wordpress.org/extend/plugins/per-page-widgets/
   b. If you want to have a widget show up everywhere, use the normal widget

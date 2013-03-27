@@ -80,9 +80,18 @@ HTML;
     'bottom-sidebar-title' 	=> 'In the News',
     'jumbo-tron-footer'    	=> $jumbo_tron_footer,
     'content-footer'        => $content_footer,
+    'excerpt-length'				=> 100,
+    'min-excerpt-length'		=> 10,
+    'max-excerpt-length'		=> 10000,
+    'older-posts-text'      => 'Older Posts',
+    'newer-posts-text'      => 'Newer Posts',
+    'version'               => 1.01,
   );
 }
 
+function bio_options_reset() {
+ 	update_option( 'bio-options', bio_options_get_defaults() );	
+}
 
 function bio_options_hidden_fields() {
   $options = get_option( 'bio-options', bio_options_get_defaults() );
@@ -107,6 +116,66 @@ function bio_options_snippets() {
       <?php bio_options_hidden_fields(); ?>
 	
 			<table class="form-table">
+				<tr valign="top">
+          <th scope="row">
+            <label for="bio-options-excerpt-length"><?php
+              _e( 'Excerpt Length' ); ?></label>
+
+            <p class="howto"><?php
+              _e( 'Number of characters to show in post excerpts.' ); ?></p>
+          </th>
+
+					<td>
+            <input id="bio-options-excerpt-length"
+              name="bio-options[excerpt-length]" 
+              type="number"
+              min="<?php esc_attr_e( $options[ 'min-excerpt-length' ] ); ?>"
+              max="<?php esc_attr_e( $options[ 'max-excerpt-length' ] ); ?>"
+              value="<?php esc_attr_e( $options[ 'excerpt-length' ] ); ?>"
+							title="<?php
+                _e( 'Number of characters to show in post excerpts.' ); ?>"
+              />
+          </td>
+				</tr>
+
+        <tr valign="top">
+          <th scope="row">
+            <label for="bio-options-older-posts-text"><?php
+              _e( 'Older Posts Text' ); ?></label>
+
+            <p class="howto"><?php
+              _e( 'Text for the "older posts" link.' ); ?></p>
+          </th>
+
+					<td>
+            <input id="bio-options-older-posts-text"
+              name="bio-options[older-posts-text]" type="text"
+              value="<?php esc_attr_e( $options[ 'older-posts-text' ] ); ?>"
+              size="25" maxlength="255" title="<?php
+                _e( 'Text for the "older posts" link.' ); ?>"
+              />
+          </td>
+				</tr>
+
+        <tr valign="top">
+          <th scope="row">
+            <label for="bio-options-newer-posts-text"><?php
+              _e( 'Newer Posts Text' ); ?></label>
+
+            <p class="howto"><?php
+              _e( 'Text for the "newer posts" link.' ); ?></p>
+          </th>
+
+					<td>
+            <input id="bio-options-newer-posts-text"
+              name="bio-options[newer-posts-text]" type="text"
+              value="<?php esc_attr_e( $options[ 'newer-posts-text' ] ); ?>"
+              size="25" maxlength="255" title="<?php
+                _e( 'Text for the "newer posts" link.' ); ?>"
+              />
+          </td>
+				</tr>
+				
 				<tr valign="top">
           <th scope="row">
             <label for="bio-options-bottom-sidebar-title"><?php
@@ -169,6 +238,11 @@ function bio_options_snippets() {
           _e('Save Changes') ?>" />
 			</p>
 		</form>
+		
+		<p>
+			<a href="<?php echo admin_url( 'themes.php?page=bio-options-snippets' );
+				?>&bio-options-reset=1" title="Reset theme snippets.">Reset Options</a>
+		</p>
 	</div>
 	<?php
 }
