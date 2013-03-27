@@ -1,66 +1,62 @@
 /**
  * Content page styles.
  */
+ h1 {
+    font-size:30px;
+}
+h2 {
+    font-size: 25px;
+}
 .comment-meta {
- 	font-style:							italic;
-} 
-
+    font-style: italic;
+}
 .comment-text {
- 	margin-top:							.5em;
+    margin-top: .5em;
 }
-
 .comment-text blockquote p {
-	font-size:							16px;
+    font-size: 16px;
 }
-
 .content {
-  margin-top:             3em;
+    margin-top: 3em;
 }
-
 .edit {
-  font-size:              125%;
-  padding-left:           2em;
+    font-size: 125%;
+    padding-left: 2em;
 }
-
 .nav-next {
- 	float:									right;
+    float: right;
 }
-
 .nav-previous {
- 	float:									left;
+    float: left;
 }
-
 #comment {
-	margin-top:							1em;
-	width:									17.5em;
+    margin-top: 1em;
+    width: 17.5em;
 }
-
 #commentform label {
- 	float:									left;
- 	width:									5em;
- 	margin-right:						.5em;
- 	
- 	font-weight:						bold;
- 	text-align:							left;
+    float: left;
+    width: 5em;
+    margin-right: .5em;
+    font-weight: bold;
+    text-align: left;
 }
-
 #commentform input {
- 	width:									12em;
+    width: 12em;
 }
-
 #comments {
-  list-style-type:        none;
+    list-style-type: none;
 }
-
 #paging-bottom {
-	margin-top:							3em;
+    margin-top: 3em;
 }
-
 #sidebar-right {
-  margin-top:             1.5em;
+    margin-top: 1.5em;
 }
-
 #sub {
- 	width:									8.5em;
- 	margin-left:						10em;
+    width: 8.5em;
+    margin-left: 10em;
+}
+.widgets_on_page ul {
+    list-style: none;
+    margin-left: 0;
 }
