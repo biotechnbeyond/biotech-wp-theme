@@ -38,9 +38,8 @@ get_header();
         <?php endif; ?>
       </div>
 
-      <hr class="soften">
 
-      <h2><?php esc_html_e( $options[ 'bottom-sidebar-title' ] ); ?></h2>
+     <!-- <h2><?php esc_html_e( $options[ 'bottom-sidebar-title' ] ); ?></h2>-->
 
       <?php if( is_active_sidebar( 'bottom-2' ) ): ?>
         <div class="row-fluid press">
